@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+
+    <title>Rock-paper-scissors</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: roboto, sans-serif;
+        }
+
+        .wrapper {
+            width: 60vw;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0 20px 0;
+            padding: 10px 0;
+            color: white;
+            background-color: palevioletred;
+        }
+
+        .panel {
+            width: 80%;
+            display: flex;
+            margin: 40px auto;
+            justify-content: center;
+        }
+
+        .panel-left,
+        .panel-right {
+            flex-basis: 50%;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .panel-left p,
+        .panel-right p {
+            font-size: 16px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            margin: 30px 0 0 0;
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+        }
+
+        .select {
+            overflow: hidden;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .select i {
+            margin: 20px 40px;
+            display: inline-block;
+            font-size: 100px;
+            color: palevioletred;
+            line-height: 150px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            padding: 10px 30px;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            text-transform: uppercase;
+            background-color: #fff;
+            font-weight: bold;
+            margin: 10px auto;
+            transition: .3s;
+            font-size: 20px;
+            color: palevioletred;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: palevioletred;
+            color: white
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Rock-paper-scissors</h1>
+
+        <div class="select">
+
+            <h3>Choose a hand and click the button to start:</h3>
+
+            <i class="far fa-hand-paper" data-option="paper" title="paper"></i>
+
+            <i class="far fa-hand-rock" data-option="rock" title="rock"></i>
+
+            <i class="far fa-hand-scissors" data-option="scissors" title="scissors"></i>
+
+        </div>
+
+        <button class="start">Let's play!</button>
+        <div class="panel">
+            <div class="panel-left">
+                <h3>Current result</h3>
+                <p>Your choice: <span data-summary="your-choice"></span></p>
+                <p>Computer's choice: <span data-summary="ai-choice"></span></p>
+                <h2>The winner: <span data-summary="who-wins"></span></h2>
+            </div>
+
+            <div class="panel-right">
+                <h3>Game result</h3>
+                <p class="numbers">number of games: <span>0</span></p>
+                <p class="wins">your wins: <span>0</span></p>
+                <p class="losses">your losses: <span>0</span></p>
+                <p class="draws">draws: <span>0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
